@@ -1,0 +1,446 @@
+2025-07-18 18:36:42 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 18:36:42 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 18:36:42 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 18:36:42 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 18:37:13 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 18:37:13 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 18:37:13 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 18:37:13 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 18:37:13 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 18:37:13 - trading_data_pipeline.ingest.data_validator - ERROR - ❌ Structure validation failed for {symbol}
+2025-07-18 18:37:13 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 18:37:13 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 21:08:36 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 21:08:36 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 21:08:36 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 21:08:36 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 21:08:36 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 21:08:36 - trading_data_pipeline.ingest.data_validator - ERROR - ❌ Structure validation failed for {symbol}
+2025-07-18 21:08:36 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 21:08:36 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 21:25:05 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 21:25:05 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 21:25:05 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 21:25:05 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 21:25:05 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 21:25:05 - trading_data_pipeline.ingest.data_validator - ERROR - ❌ Structure validation failed for {symbol}
+2025-07-18 21:25:05 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 21:25:05 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 21:45:28 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 21:45:28 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 21:45:28 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 21:45:28 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 21:45:28 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 21:45:28 - trading_data_pipeline.ingest.data_validator - ERROR - ❌ Structure validation failed for {symbol}
+2025-07-18 21:45:28 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 21:45:28 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 22:38:59 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:38:59 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:38:59 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 22:38:59 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:39:02 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:39:02 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:39:02 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 22:39:02 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 22:39:02 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:39:02 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:39:02 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 22:39:02 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:39:02 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:39:02 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:39:02 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:39:02 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:39:02 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:39:02 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:39:02 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:39:02 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:39:02 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:39:02 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:39:02 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:40:55 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:40:55 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:40:55 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 22:40:55 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:40:57 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:40:57 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:40:57 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 22:40:57 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 22:40:57 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:40:57 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:40:57 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 22:40:57 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:40:58 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:40:58 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:40:58 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:40:58 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:40:58 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:40:58 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:40:58 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:40:58 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:40:58 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:40:58 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:40:58 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:42:00 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:42:00 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:42:00 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 22:42:00 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:42:02 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:42:02 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:42:02 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 22:42:02 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 22:42:02 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:42:02 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:42:02 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 22:42:02 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:42:03 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:42:03 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:42:03 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:42:03 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:42:03 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:42:03 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:42:03 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:42:03 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:42:03 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:42:03 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:42:03 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:45:06 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:45:06 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:45:06 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 22:45:06 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:45:07 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:45:07 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:45:07 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 22:45:07 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 22:45:07 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:45:07 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:45:07 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 22:45:07 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:45:09 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:45:09 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:45:09 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:45:09 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:45:09 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:45:09 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:45:09 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:45:09 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:45:09 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:45:09 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:45:09 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:46:35 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:46:35 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:46:35 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 22:46:35 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:46:37 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:46:37 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:46:37 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 22:46:37 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 22:46:37 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:46:37 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:46:37 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 22:46:37 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:46:37 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:46:37 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:46:37 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:46:37 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:46:37 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:46:37 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:46:37 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:46:37 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:46:37 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:46:37 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:46:37 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:49:52 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:49:52 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:49:52 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 22:49:52 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:49:55 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:49:55 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:49:55 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 22:49:55 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 22:49:55 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:49:55 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:49:55 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 22:49:55 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:49:56 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:49:56 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:49:56 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:49:56 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:49:56 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:49:56 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:49:56 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:49:56 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:49:56 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:49:56 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:49:56 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:51:57 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:51:57 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:51:57 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 22:51:57 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:51:59 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:51:59 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:51:59 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 22:51:59 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 22:51:59 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:51:59 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:51:59 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 22:51:59 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:52:00 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:52:00 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:52:00 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:52:00 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:52:00 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:52:00 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:52:00 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:52:00 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:52:00 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:52:00 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:52:00 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:55:06 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:55:06 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:55:06 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 22:55:06 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:55:08 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:55:08 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:55:08 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 22:55:08 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 22:55:08 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:55:08 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:55:08 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 22:55:08 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:55:08 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:55:08 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:55:08 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:55:08 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:55:08 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:55:08 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 22:55:08 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 22:55:08 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 22:55:08 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 22:55:08 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 22:55:08 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 23:00:31 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 23:00:31 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 23:00:31 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 23:00:31 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 23:00:33 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 23:00:33 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 23:00:33 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 23:00:33 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 23:00:33 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 23:00:33 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 23:00:33 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 23:00:33 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 23:00:33 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 23:00:33 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 23:00:33 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 23:00:33 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 23:00:33 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 23:00:33 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 23:00:33 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 23:00:33 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 23:00:33 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 23:00:33 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 23:00:33 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 23:03:03 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 23:03:03 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 23:03:03 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 23:03:03 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 23:03:07 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 23:03:07 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 23:03:07 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 23:03:07 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 23:03:07 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 23:03:07 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 23:03:07 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 23:03:07 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 23:03:08 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 23:03:08 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 23:03:08 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 23:03:08 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 23:03:08 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 23:03:08 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 23:03:08 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 23:03:08 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 23:03:08 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 23:03:08 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 23:03:08 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 23:05:17 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 23:05:17 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 23:05:17 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 23:05:17 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 23:05:20 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 23:05:20 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 23:05:20 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 23:05:20 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 23:05:20 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 23:05:20 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 23:05:20 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 23:05:20 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 23:05:21 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 23:05:21 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 23:05:21 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 23:05:21 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 23:05:21 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 23:05:21 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 23:05:21 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 23:05:21 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 23:05:21 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 23:05:21 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 23:05:21 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 23:08:01 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:08:01 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:08:01 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:08:01 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:08:01 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:08:01 - trading_data_pipeline.ingest.data_validator - ERROR - ❌ Structure validation failed for {symbol}
+2025-07-18 23:08:01 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:08:01 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:10:21 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:10:21 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:10:21 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:10:21 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:10:21 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:10:21 - trading_data_pipeline.ingest.data_validator - ERROR - ❌ Structure validation failed for {symbol}
+2025-07-18 23:10:21 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:10:21 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:15:53 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:15:53 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:15:53 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:15:53 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:15:53 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:15:53 - trading_data_pipeline.ingest.data_validator - ERROR - ❌ Structure validation failed for {symbol}
+2025-07-18 23:15:53 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:15:53 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:30:56 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:30:56 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:30:56 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:30:56 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:30:56 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:30:56 - trading_data_pipeline.ingest.data_validator - ERROR - ❌ Structure validation failed for {symbol}
+2025-07-18 23:30:56 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:30:56 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:47:39 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:47:39 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:47:39 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:47:39 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:47:39 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:47:39 - trading_data_pipeline.ingest.data_validator - ERROR - ❌ Structure validation failed for {symbol}
+2025-07-18 23:47:39 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:47:39 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:50:58 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:50:58 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:50:58 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:50:58 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:50:58 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:50:58 - trading_data_pipeline.ingest.data_validator - ERROR - ❌ Structure validation failed for {symbol}
+2025-07-18 23:50:58 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:50:58 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:53:34 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:53:34 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:53:34 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:53:34 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:53:34 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:53:34 - trading_data_pipeline.ingest.data_validator - ERROR - ❌ Structure validation failed for {symbol}
+2025-07-18 23:53:34 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:53:34 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:57:26 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:57:26 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:57:26 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:57:26 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:57:26 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:57:26 - trading_data_pipeline.ingest.data_validator - ERROR - ❌ Structure validation failed for {symbol}
+2025-07-18 23:57:26 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:57:26 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:57:30 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 23:57:30 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 23:57:30 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 23:57:30 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 23:57:32 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 23:57:32 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 23:57:32 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 23:57:32 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-18 23:57:32 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 23:57:32 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 23:57:32 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-18 23:57:32 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 23:57:33 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 23:57:33 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 23:57:33 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 23:57:33 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 23:57:33 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 23:57:33 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-18 23:57:33 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-18 23:57:33 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-18 23:57:33 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 23:57:33 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-18 23:57:33 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-18 23:59:56 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:59:56 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:59:56 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:59:56 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-18 23:59:56 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:59:56 - trading_data_pipeline.ingest.data_validator - ERROR - ❌ Structure validation failed for {symbol}
+2025-07-18 23:59:56 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-18 23:59:56 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-19 00:00:00 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-19 00:00:00 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-19 00:00:00 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-19 00:00:00 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-19 00:00:03 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-19 00:00:03 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-19 00:00:03 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-19 00:00:03 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-19 00:00:03 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-19 00:00:03 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-19 00:00:03 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-19 00:00:03 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-19 00:00:03 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-19 00:00:03 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-19 00:00:03 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-19 00:00:03 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-19 00:00:03 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-19 00:00:03 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-19 00:00:03 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-19 00:00:03 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-19 00:00:03 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-19 00:00:03 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-19 00:00:03 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-19 00:05:20 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-19 00:05:20 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-19 00:05:20 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-19 00:05:20 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-19 00:05:20 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-19 00:05:20 - trading_data_pipeline.ingest.data_validator - ERROR - ❌ Structure validation failed for {symbol}
+2025-07-19 00:05:20 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-19 00:05:20 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-19 00:05:24 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-19 00:05:24 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-19 00:05:24 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-19 00:05:24 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-19 00:05:26 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-19 00:05:26 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-19 00:05:26 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-19 00:05:26 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📦 Using cached data for {symbol}
+2025-07-19 00:05:26 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-19 00:05:26 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-19 00:05:26 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔄 Falling back to Yahoo Finance for {symbol}
+2025-07-19 00:05:26 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-19 00:05:27 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-19 00:05:27 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-19 00:05:27 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-19 00:05:27 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-19 00:05:27 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-19 00:05:27 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ❌ KiteConnect not available
+2025-07-19 00:05:27 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 📥 Fetching {yahoo_symbol} from Yahoo Finance...
+2025-07-19 00:05:27 - trading_data_pipeline.ingest.tiered_data_fetcher - WARNING - ⚠️ No data received from Yahoo Finance for {symbol}
+2025-07-19 00:05:27 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-19 00:05:27 - trading_data_pipeline.ingest.tiered_data_fetcher - INFO - 🔧 Tiered Data Fetcher initialized (strategy: {strategy.value})
+2025-07-19 00:05:27 - trading_data_pipeline.ingest.tiered_data_fetcher - ERROR - ❌ Data fetch failed for {symbol}
+2025-07-19 00:05:44 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-19 00:05:44 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-19 00:05:44 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-19 00:05:44 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found
+2025-07-19 00:05:44 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-19 00:05:44 - trading_data_pipeline.ingest.data_validator - ERROR - ❌ Structure validation failed for {symbol}
+2025-07-19 00:05:44 - trading_data_pipeline.ingest.data_validator - INFO - 🔍 Starting comprehensive validation for {symbol} from {data_source.value}
+2025-07-19 00:05:44 - trading_data_pipeline.ingest.data_validator - INFO - ✅ Validation complete for {symbol}: {validation_summary['total_issues']} issues found

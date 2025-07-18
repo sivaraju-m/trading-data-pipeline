@@ -1,0 +1,108 @@
+# BigQuery Configuration for AI Trading Machine
+# Configure your GCP project and BigQuery settings
+
+# GCP Project Settings
+project_id: "ai-trading-gcp-459813"  # Replace with your GCP project ID
+location: "US"  # BigQuery location (US, EU, asia-northeast1, etc.)
+
+# BigQuery Dataset Settings
+dataset_id: "ai_trading_backtest"
+dataset_description: "AI Trading Machine backtest results and analytics"
+
+# BigQuery Table Settings
+table_id: "strategy_results_enhanced"
+table_description: "Enhanced strategy results with approval workflow and comprehensive metrics"
+
+# Write Settings
+write_mode: "append"  # Options: "append", "replace"
+max_retries: 3
+retry_delay: 2  # seconds
+
+# Authentication
+# Set GOOGLE_APPLICATION_CREDENTIALS environment variable
+# Or use: gcloud auth application-default login
+service_account_path: null  # Optional: path to service account JSON file
+
+# Table Configuration
+partitioning:
+  enabled: true
+  field: "timestamp"
+  type: "DAY"  # Options: DAY, HOUR, MONTH, YEAR
+
+clustering:
+  enabled: true
+  fields:
+    - "strategy_name"
+    - "scenario_name"
+
+# Performance Settings
+batch_size: 1000  # Number of rows to insert in each batch
+streaming_insert: false  # Use streaming inserts for real-time data
+enable_schema_auto_detection: false
+
+# Monitoring and Logging
+logging:
+  level: "INFO"  # Options: DEBUG, INFO, WARNING, ERROR
+  log_sql_queries: true
+  log_performance_metrics: true
+
+# Data Retention
+data_retention_days: 365  # Automatic deletion after N days (optional)
+archive_old_data: true
+
+# Query Optimization
+query_settings:
+  use_query_cache: true
+  maximum_bytes_billed: 1000000000  # 1GB limit
+  job_timeout_ms: 300000  # 5 minutes
+
+# Cost Control
+cost_control:
+  daily_budget_usd: 10.0  # Daily spending limit
+  alert_threshold_usd: 8.0  # Alert when approaching budget
+  enable_budget_alerts: true
+
+# Schema Settings
+schema_validation:
+  strict_mode: true
+  allow_field_addition: true
+  allow_field_relaxation: false
+
+# Advanced Features
+advanced:
+  enable_column_level_security: false
+  enable_row_level_security: false
+  enable_customer_managed_encryption: false
+  encryption_key_name: null
+
+# Export Settings
+export:
+  enable_scheduled_exports: false
+  export_format: "PARQUET"  # Options: CSV, JSON, AVRO, PARQUET
+  export_destination: "gs://ai-trading-exports/"
+  export_schedule: "0 2 * * *"  # Daily at 2 AM UTC
+
+# Integration Settings
+integration:
+  enable_dataflow: false
+  enable_cloud_functions: false
+  enable_pub_sub: false
+  enable_cloud_run: false
+
+# Environment-specific overrides
+environments:
+  development:
+    table_id: "strategy_results_dev"
+    dataset_id: "ai_trading_backtest_dev"
+    write_mode: "replace"
+    
+  staging:
+    table_id: "strategy_results_staging"
+    dataset_id: "ai_trading_backtest_staging"
+    
+  production:
+    table_id: "strategy_results_prod"
+    dataset_id: "ai_trading_backtest_prod"
+    data_retention_days: 1825  # 5 years
+    enable_budget_alerts: true
+    daily_budget_usd: 50.0

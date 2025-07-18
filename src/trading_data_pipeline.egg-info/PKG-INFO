@@ -1,0 +1,60 @@
+Metadata-Version: 2.4
+Name: trading-data-pipeline
+Version: 0.1.0
+Summary: Data pipeline for ingesting financial market data
+Home-page: https://github.com/yourusername/trading-data-pipeline
+Author: Your Name
+Author-email: your.email@example.com
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=1.5.0
+Requires-Dist: numpy>=1.22.0
+Requires-Dist: yfinance>=0.2.12
+Requires-Dist: google-cloud-bigquery>=3.3.5
+Requires-Dist: google-cloud-storage>=2.7.0
+Requires-Dist: google-cloud-secret-manager>=2.12.6
+Requires-Dist: kiteconnect>=4.1.0
+Requires-Dist: pyyaml>=6.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Trading Data Pipeline
+
+A modular pipeline for ingesting, validating, and storing financial market data from multiple sources.
+
+## Features
+
+- Multi-source data ingestion (Yahoo Finance, KiteConnect)
+- Data validation and cleaning
+- BigQuery and GCS integration
+- Batch and incremental data updates
+- Production-ready monitoring and logging
+
+## Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/trading-data-pipeline.git
+cd trading-data-pipeline
+
+# Install the package
+pip install -e .
+```
+
+## Usage
+
+```bash
+# Run a complete historical data pipeline
+pipeline-run --config config/pipeline_config.yaml
+
+# Batch upload data for a specific universe
+batch-upload --config config/pipeline_config.yaml --universe nifty50
+```
+
+See documentation for more details.

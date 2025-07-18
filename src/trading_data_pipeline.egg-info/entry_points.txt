@@ -1,0 +1,3 @@
+[console_scripts]
+batch-upload = trading_data_pipeline.bin.batch_upload_historical:main
+pipeline-run = trading_data_pipeline.bin.complete_historical_pipeline:main
