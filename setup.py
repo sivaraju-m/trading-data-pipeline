@@ -22,10 +22,10 @@ setup(
             "pipeline-run=trading_data_pipeline.bin.complete_historical_pipeline:main",
         ],
     },
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="Sivaraju Malladi",
+    author_email="sivaraj.malladi@example.com",
     description="Data pipeline for ingesting financial market data",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/trading-data-pipeline",
+    url="https://github.com/sivaraju-m/trading-data-pipeline",
 )

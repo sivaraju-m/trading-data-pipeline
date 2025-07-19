@@ -8,6 +8,7 @@ src/trading_data_pipeline.egg-info/entry_points.txt
 src/trading_data_pipeline.egg-info/requires.txt
 src/trading_data_pipeline.egg-info/top_level.txt
 src/trading_data_pipeline/database/__init__.py
+src/trading_data_pipeline/database/bigquery_manager.py
 src/trading_data_pipeline/database/bigquery_storage.py
 src/trading_data_pipeline/database/db_manager.py
 src/trading_data_pipeline/database/schema.py

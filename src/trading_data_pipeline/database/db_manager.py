@@ -3,6 +3,10 @@
 Database Configuration and Management
 ====================================
 Manages separate databases for testing and production modes.
+
+This module provides a unified interface for managing SQLite databases used in a trading data pipeline. It supports both testing and production environments, automatically creating and configuring databases as needed. The DatabaseManager class handles connections, schema creation, and basic operations such as saving market data and backtest results. It also provides utilities for loading custom configuration, logging, and retrieving database statistics. The module is designed to facilitate robust data management for trading analytics, backtesting, and reporting workflows.
+
+
 """
 
 import json

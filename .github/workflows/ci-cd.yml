@@ -1,0 +1,229 @@
+name: Trading Data Pipeline CI/CD
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '30 18 * * 1-5'  # Daily at 6:30 PM IST (after market close + data pull)
+
+env:
+  PYTHON_VERSION: '3.11'
+  GCP_PROJECT_ID: 'ai-trading-gcp-459813'
+  BQ_DATASET: 'trading_data'
+
+jobs:
+  test:
+    name: Test and Lint
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements*.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -r requirements-dev.txt
+          pip install -e .
+      
+      - name: Run linting
+        run: |
+          flake8 src/ bin/ --max-line-length=88 --extend-ignore=E203,W503
+          black --check src/ bin/
+          isort --check-only src/ bin/
+      
+      - name: Run type checking
+        run: |
+          mypy src/ --ignore-missing-imports
+      
+      - name: Run unit tests
+        run: |
+          pytest tests/unit/ -v --cov=src --cov-report=xml
+      
+      - name: Run integration tests
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+        run: |
+          echo "$GOOGLE_APPLICATION_CREDENTIALS_JSON" > gcp-key.json
+          export GOOGLE_APPLICATION_CREDENTIALS=./gcp-key.json
+          pytest tests/integration/ -v
+        if: github.event_name != 'pull_request'
+      
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          file: ./coverage.xml
+          flags: unittests
+  
+  build:
+    name: Build Docker Image
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      
+      - name: Login to Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: gcr.io
+          username: _json_key
+          password: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+      
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: |
+            gcr.io/${{ env.GCP_PROJECT_ID }}/trading-data-pipeline:latest
+            gcr.io/${{ env.GCP_PROJECT_ID }}/trading-data-pipeline:${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+  
+  daily-data-pull:
+    name: Daily Data Pull
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -e .
+      
+      - name: Set up Google Cloud credentials
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+        run: |
+          echo "$GOOGLE_APPLICATION_CREDENTIALS_JSON" > gcp-key.json
+          export GOOGLE_APPLICATION_CREDENTIALS=./gcp-key.json
+      
+      - name: Run daily data pull
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ./gcp-key.json
+          KITE_API_KEY: ${{ secrets.KITE_API_KEY }}
+          KITE_ACCESS_TOKEN: ${{ secrets.KITE_ACCESS_TOKEN }}
+          GCP_PROJECT_ID: ${{ env.GCP_PROJECT_ID }}
+          BQ_DATASET: ${{ env.BQ_DATASET }}
+        run: |
+          python bin/daily_data_scheduler.py --run-once
+      
+      - name: Upload logs
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: daily-pull-logs
+          path: logs/
+          retention-days: 7
+  
+  deploy:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    needs: [test, build]
+    if: github.ref == 'refs/heads/main'
+    environment: production
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Google Cloud CLI
+        uses: google-github-actions/setup-gcloud@v1
+        with:
+          service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+          project_id: ${{ env.GCP_PROJECT_ID }}
+      
+      - name: Deploy to Cloud Run
+        run: |
+          gcloud run deploy trading-data-pipeline \
+            --image=gcr.io/${{ env.GCP_PROJECT_ID }}/trading-data-pipeline:${{ github.sha }} \
+            --platform=managed \
+            --region=us-central1 \
+            --allow-unauthenticated \
+            --set-env-vars="GCP_PROJECT_ID=${{ env.GCP_PROJECT_ID }},BQ_DATASET=${{ env.BQ_DATASET }}" \
+            --memory=2Gi \
+            --cpu=1 \
+            --timeout=3600 \
+            --concurrency=1 \
+            --max-instances=3
+      
+      - name: Set up Cloud Scheduler
+        run: |
+          # Create or update daily data pull job
+          gcloud scheduler jobs create http daily-data-pull \
+            --schedule="0 18 * * 1-5" \
+            --uri="https://trading-data-pipeline-dot-${{ env.GCP_PROJECT_ID }}.uc.r.appspot.com/daily-pull" \
+            --http-method=POST \
+            --location=us-central1 \
+            --time-zone="Asia/Kolkata" \
+            --description="Daily data pull after market close" \
+            --max-retry-attempts=3 \
+            --min-backoff-duration=60s \
+            --max-backoff-duration=300s \
+            || gcloud scheduler jobs update http daily-data-pull \
+            --schedule="0 18 * * 1-5" \
+            --uri="https://trading-data-pipeline-dot-${{ env.GCP_PROJECT_ID }}.uc.r.appspot.com/daily-pull" \
+            --location=us-central1
+          
+          # Create or update real-time data job
+          gcloud scheduler jobs create http realtime-data-start \
+            --schedule="15 9 * * 1-5" \
+            --uri="https://trading-data-pipeline-dot-${{ env.GCP_PROJECT_ID }}.uc.r.appspot.com/start-realtime" \
+            --http-method=POST \
+            --location=us-central1 \
+            --time-zone="Asia/Kolkata" \
+            --description="Start real-time data collection at market open" \
+            || gcloud scheduler jobs update http realtime-data-start \
+            --schedule="15 9 * * 1-5" \
+            --uri="https://trading-data-pipeline-dot-${{ env.GCP_PROJECT_ID }}.uc.r.appspot.com/start-realtime" \
+            --location=us-central1
+  
+  notify:
+    name: Notify Deployment
+    runs-on: ubuntu-latest
+    needs: [deploy]
+    if: always()
+    
+    steps:
+      - name: Notify success
+        if: needs.deploy.result == 'success'
+        run: |
+          echo "✅ Trading Data Pipeline deployed successfully"
+          # Add Slack/email notification here
+      
+      - name: Notify failure
+        if: needs.deploy.result == 'failure'
+        run: |
+          echo "❌ Trading Data Pipeline deployment failed"
+          # Add failure notification here
