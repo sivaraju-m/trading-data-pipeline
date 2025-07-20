@@ -36,15 +36,18 @@ from .data_validator import (
     validate_yahoo_finance_data,
 )
 
+
 class DataSourceTier(Enum):
     """
     Enum defining the tiers of data sources, ranked by reliability and preference.
     """
-    PRIMARY = auto()     # Most reliable (KiteConnect, Bloomberg, etc.)
-    SECONDARY = auto()   # Good reliability (Yahoo Finance, AlphaVantage, etc.)
-    TERTIARY = auto()    # Less reliable (Free APIs, etc.)
-    CACHED = auto()      # Local/cached data
-    IMPUTED = auto()     # Data that has been algorithmically generated
+
+    PRIMARY = auto()  # Most reliable (KiteConnect, Bloomberg, etc.)
+    SECONDARY = auto()  # Good reliability (Yahoo Finance, AlphaVantage, etc.)
+    TERTIARY = auto()  # Less reliable (Free APIs, etc.)
+    CACHED = auto()  # Local/cached data
+    IMPUTED = auto()  # Data that has been algorithmically generated
+
 
 # Import data loaders
 try:

@@ -73,19 +73,24 @@ class ValidationResult:
     validation_summary: Optional[dict[str, Any]] = None
 
 
-def validate_data(df: pd.DataFrame, symbol: str = "UNKNOWN", source: str = "unknown", strict: bool = False) -> Dict[str, Union[bool, pd.DataFrame, str]]:
+def validate_data(
+    df: pd.DataFrame,
+    symbol: str = "UNKNOWN",
+    source: str = "unknown",
+    strict: bool = False,
+) -> Dict[str, Union[bool, pd.DataFrame, str]]:
     """
     Validate market data for data quality issues.
-    
+
     This function performs basic validation on market data to ensure it meets
     quality standards before being used for trading or analysis.
-    
+
     Args:
         df: DataFrame containing market data (OHLCV)
         symbol: The ticker symbol of the data
         source: Source of the data (yahoo, kite, etc.)
         strict: Whether to use strict validation
-        
+
     Returns:
         Dictionary with validation results containing:
         - is_valid: Boolean indicating if data passed validation
@@ -102,18 +107,18 @@ def validate_data(df: pd.DataFrame, symbol: str = "UNKNOWN", source: str = "unkn
         data_source = DataSource.NSE_OFFICIAL
     elif source.lower() == "bse":
         data_source = DataSource.BSE_OFFICIAL
-    
+
     # Initialize validator
     validator = MarketDataValidator(strict_mode=strict)
-    
+
     # Run comprehensive validation
     result = validator.comprehensive_validation(df, symbol, data_source)
-    
+
     # Prepare return value
     return {
         "is_valid": result.is_valid,
         "cleaned_data": result.cleaned_data if result.cleaned_data is not None else df,
-        "message": f"Validation {'passed' if result.is_valid else 'failed'} with {len(result.issues)} issues"
+        "message": f"Validation {'passed' if result.is_valid else 'failed'} with {len(result.issues)} issues",
     }
 
 
@@ -924,45 +929,41 @@ class MarketDataValidator:
 class DataValidator:
     """
     Data validation framework for market data from various sources.
-    
+
     This class provides a comprehensive validation framework for market data
     to ensure data quality, consistency, and accuracy before use in trading
     algorithms.
     """
-    
+
     def __init__(self, strict_mode: bool = False):
         """
         Initialize the data validator.
-        
+
         Args:
             strict_mode: Whether to use strict validation rules
         """
         self.strict_mode = strict_mode
         self.logger = logger
-    
-    def validate(self, 
-                df: pd.DataFrame, 
-                symbol: str, 
-                source: str = "unknown") -> ValidationResult:
+
+    def validate(
+        self, df: pd.DataFrame, symbol: str, source: str = "unknown"
+    ) -> ValidationResult:
         """
         Validate market data for quality issues.
-        
+
         Args:
             df: DataFrame containing market data (OHLCV)
             symbol: The ticker symbol of the data
             source: Source of the data (yahoo, kite, etc.)
-            
+
         Returns:
             ValidationResult object with validation outcomes
         """
         # Use the existing validate_data function for implementation
         result = validate_data(
-            df=df, 
-            symbol=symbol, 
-            source=source, 
-            strict=self.strict_mode
+            df=df, symbol=symbol, source=source, strict=self.strict_mode
         )
-        
+
         # Convert to ValidationResult format
         issues = []
         if not result["is_valid"]:
@@ -972,36 +973,38 @@ class DataValidator:
                 data_source = DataSource.YAHOO_FINANCE
             elif source.lower() in ["kite", "kiteconnect"]:
                 data_source = DataSource.KITECONNECT
-                
-            issues.append(ValidationIssue(
-                symbol=symbol,
-                issue_type="data_quality",
-                severity=ValidationSeverity.ERROR,
-                message=result.get("message", "Unknown validation error"),
-                timestamp=datetime.now(),
-                data_source=data_source
-            ))
-        
+
+            issues.append(
+                ValidationIssue(
+                    symbol=symbol,
+                    issue_type="data_quality",
+                    severity=ValidationSeverity.ERROR,
+                    message=result.get("message", "Unknown validation error"),
+                    timestamp=datetime.now(),
+                    data_source=data_source,
+                )
+            )
+
         return ValidationResult(
             is_valid=result["is_valid"],
             issues=issues,
             cleaned_data=result.get("cleaned_data", None),
-            validation_summary={"message": result.get("message", "")}
+            validation_summary={"message": result.get("message", "")},
         )
-    
+
     def get_validation_stats(self) -> dict:
         """
         Get statistics about validation operations.
-        
+
         Returns:
             Dictionary with validation statistics
         """
         return {
             "total_validations": 0,  # Would track this in a real implementation
             "success_rate": 0.0,
-            "common_issues": []
+            "common_issues": [],
         }
-    
+
 
 # Utility functions for common validation scenarios
 def validate_yahoo_finance_data(
@@ -1100,25 +1103,26 @@ if __name__ == "__main__":
     print("3. Configure alerts for critical issues")
     print("4. Implement data cleaning based on validation results")
 
+
 def validate_data_integrity(
-    data: pd.DataFrame, 
-    symbol: str, 
+    data: pd.DataFrame,
+    symbol: str,
     source: DataSource = DataSource.UNKNOWN,
     required_columns: Optional[list[str]] = None,
     min_rows: int = 20,
     max_missing_pct: float = 0.05,
-    check_duplicates: bool = True
+    check_duplicates: bool = True,
 ) -> ValidationResult:
     """
     Comprehensive data integrity validation for financial market data.
-    
+
     This function validates market data for integrity issues including:
     - Presence of required columns
     - Sufficient data points
     - Duplicated rows
     - Missing values
     - Price continuity and plausibility
-    
+
     Args:
         data: DataFrame containing market data
         symbol: Stock symbol being validated
@@ -1127,13 +1131,13 @@ def validate_data_integrity(
         min_rows: Minimum number of rows required
         max_missing_pct: Maximum allowed percentage of missing values
         check_duplicates: Whether to check for duplicate rows
-        
+
     Returns:
         ValidationResult with data integrity validation results
     """
     if required_columns is None:
         required_columns = ["open", "high", "low", "close", "volume"]
-    
+
     result = ValidationResult(
         symbol=symbol,
         source=source,
@@ -1141,21 +1145,20 @@ def validate_data_integrity(
         issues=[],
         metadata={
             "row_count": len(data) if data is not None and not data.empty else 0,
-            "column_count": len(data.columns) if data is not None and not data.empty else 0,
+            "column_count": (
+                len(data.columns) if data is not None and not data.empty else 0
+            ),
             "duplicate_count": 0,
             "missing_value_count": 0,
-        }
+        },
     )
-    
+
     # Check if data is None or empty
     if data is None or data.empty:
         result.is_valid = False
-        result.add_issue(
-            "No data available for validation",
-            ValidationSeverity.ERROR
-        )
+        result.add_issue("No data available for validation", ValidationSeverity.ERROR)
         return result
-    
+
     # Check required columns
     if required_columns:
         missing_cols = [col for col in required_columns if col not in data.columns]
@@ -1163,27 +1166,26 @@ def validate_data_integrity(
             result.is_valid = False
             result.add_issue(
                 f"Missing required columns: {', '.join(missing_cols)}",
-                ValidationSeverity.ERROR
+                ValidationSeverity.ERROR,
             )
-    
+
     # Check sufficient data points
     if len(data) < min_rows:
         result.is_valid = False
         result.add_issue(
             f"Insufficient data points: {len(data)} (minimum {min_rows})",
-            ValidationSeverity.ERROR
+            ValidationSeverity.ERROR,
         )
-    
+
     # Check for duplicates if requested
     if check_duplicates:
         duplicate_count = data.duplicated().sum()
         result.metadata["duplicate_count"] = int(duplicate_count)
         if duplicate_count > 0:
             result.add_issue(
-                f"Found {duplicate_count} duplicate rows",
-                ValidationSeverity.WARNING
+                f"Found {duplicate_count} duplicate rows", ValidationSeverity.WARNING
             )
-    
+
     # Check for missing values
     missing_count = data.isnull().sum().sum()
     result.metadata["missing_value_count"] = int(missing_count)
@@ -1193,34 +1195,42 @@ def validate_data_integrity(
             result.is_valid = False
             result.add_issue(
                 f"High percentage of missing values: {missing_pct:.2%} (max allowed: {max_missing_pct:.2%})",
-                ValidationSeverity.ERROR
+                ValidationSeverity.ERROR,
             )
         else:
             result.add_issue(
                 f"Contains {missing_count} missing values ({missing_pct:.2%})",
-                ValidationSeverity.WARNING
+                ValidationSeverity.WARNING,
             )
-    
+
     # Price continuity check (if price columns exist)
-    price_cols = [col for col in ["open", "high", "low", "close"] if col in data.columns]
+    price_cols = [
+        col for col in ["open", "high", "low", "close"] if col in data.columns
+    ]
     if price_cols:
         # Check for unrealistic price jumps
         for col in price_cols:
             if len(data) > 1:
                 price_changes = data[col].pct_change().abs()
-                extreme_changes = price_changes[price_changes > 0.2]  # 20% change threshold
+                extreme_changes = price_changes[
+                    price_changes > 0.2
+                ]  # 20% change threshold
                 if not extreme_changes.empty:
                     result.add_issue(
                         f"Extreme price changes detected in '{col}' column: {len(extreme_changes)} instances",
-                        ValidationSeverity.WARNING
+                        ValidationSeverity.WARNING,
                     )
-    
+
     # Additional validation for specific data types could be added here
-    
+
     # Log validation summary
     if result.is_valid:
-        logger.info(f"✅ Data integrity validation passed for {symbol} ({source.value})")
+        logger.info(
+            f"✅ Data integrity validation passed for {symbol} ({source.value})"
+        )
     else:
-        logger.warning(f"⚠️ Data integrity validation failed for {symbol} ({source.value}): {len(result.issues)} issues found")
-    
+        logger.warning(
+            f"⚠️ Data integrity validation failed for {symbol} ({source.value}): {len(result.issues)} issues found"
+        )
+
     return result

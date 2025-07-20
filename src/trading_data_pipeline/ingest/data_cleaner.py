@@ -205,11 +205,11 @@ def remove_outliers(
         if not df.loc[outliers, col].empty:
             original_count = len(df.loc[outliers, col])
             outlier_count += original_count
-            
+
             # Cap values outside the bounds
             df.loc[df[col] < lower_bound, col] = lower_bound
             df.loc[df[col] > upper_bound, col] = upper_bound
-            
+
             logging.info(f"Capped {original_count} outliers in column {col}")
 
     if outlier_count > 0:
@@ -229,44 +229,46 @@ def enforce_ohlc_consistency(data: pd.DataFrame) -> pd.DataFrame:
         DataFrame with consistent OHLC values
     """
     df = data.copy()
-    
+
     # Check if all required columns exist
     ohlc_cols = ["Open", "High", "Low", "Close"]
     if not all(col in df.columns for col in ohlc_cols):
         return df
-    
+
     # Track the number of inconsistencies fixed
     inconsistencies = 0
-    
+
     # Ensure High is the highest value
-    inconsistent_high = (df["High"] < df[["Open", "Close"]].max(axis=1))
+    inconsistent_high = df["High"] < df[["Open", "Close"]].max(axis=1)
     if inconsistent_high.any():
         inconsistencies += inconsistent_high.sum()
-        df.loc[inconsistent_high, "High"] = df.loc[inconsistent_high, ["Open", "Close"]].max(axis=1)
-    
+        df.loc[inconsistent_high, "High"] = df.loc[
+            inconsistent_high, ["Open", "Close"]
+        ].max(axis=1)
+
     # Ensure Low is the lowest value
-    inconsistent_low = (df["Low"] > df[["Open", "Close"]].min(axis=1))
+    inconsistent_low = df["Low"] > df[["Open", "Close"]].min(axis=1)
     if inconsistent_low.any():
         inconsistencies += inconsistent_low.sum()
-        df.loc[inconsistent_low, "Low"] = df.loc[inconsistent_low, ["Open", "Close"]].min(axis=1)
-    
+        df.loc[inconsistent_low, "Low"] = df.loc[
+            inconsistent_low, ["Open", "Close"]
+        ].min(axis=1)
+
     if inconsistencies > 0:
         logging.info(f"Fixed {inconsistencies} OHLC inconsistencies")
-    
+
     return df
 
 
 def handle_negative_prices(
-    data: pd.DataFrame, 
-    replace_method: str = "absolute",
-    min_valid_price: float = 0.01
+    data: pd.DataFrame, replace_method: str = "absolute", min_valid_price: float = 0.01
 ) -> pd.DataFrame:
     """
     Handle negative prices in financial data.
-    
+
     Negative prices can appear due to data errors, feed problems, or in rare cases
     with certain derivatives/futures. This function handles them using various methods.
-    
+
     Args:
         data: DataFrame containing price data
         replace_method: Method to handle negative prices:
@@ -275,58 +277,60 @@ def handle_negative_prices(
             - 'minimum': Replace with the minimum valid price
             - 'nan': Replace with NaN and then impute later
         min_valid_price: Minimum valid price for replacement when using 'minimum' method
-    
+
     Returns:
         DataFrame with negative prices handled
     """
     df = data.copy()
-    
+
     # Price columns to check
     price_cols = ["Open", "High", "Low", "Close", "Adj Close"]
     price_cols = [col for col in price_cols if col in df.columns]
-    
+
     if not price_cols:
         logging.warning("No price columns found in data")
         return df
-    
+
     # Count negative prices
     neg_price_count = 0
     for col in price_cols:
         neg_mask = df[col] < 0
         neg_count = neg_mask.sum()
         neg_price_count += neg_count
-        
+
         if neg_count > 0:
             logging.warning(f"Found {neg_count} negative values in {col}")
-            
+
             # Handle based on the specified method
             if replace_method == "absolute":
                 df.loc[neg_mask, col] = df.loc[neg_mask, col].abs()
-                
+
             elif replace_method == "previous":
                 # Store original indices for negative values
                 neg_indices = df.index[neg_mask]
-                
+
                 # Forward fill from previous valid values
                 df[col] = df[col].mask(neg_mask).ffill()
-                
+
                 # If there are still NaNs at the beginning, backward fill
                 if df[col].isna().any():
                     df[col] = df[col].bfill()
-                    
+
             elif replace_method == "minimum":
                 df.loc[neg_mask, col] = min_valid_price
-                
+
             elif replace_method == "nan":
                 df.loc[neg_mask, col] = np.nan
                 # Note: These NaNs should be handled later with impute_missing_values
-            
+
             else:
                 logging.error(f"Unknown replace_method: {replace_method}")
                 # Default to absolute
                 df.loc[neg_mask, col] = df.loc[neg_mask, col].abs()
-    
+
     if neg_price_count > 0:
-        logging.info(f"Handled {neg_price_count} negative prices using {replace_method} method")
-    
+        logging.info(
+            f"Handled {neg_price_count} negative prices using {replace_method} method"
+        )
+
     return df

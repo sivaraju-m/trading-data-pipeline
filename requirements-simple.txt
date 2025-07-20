@@ -1,0 +1,19 @@
+# Core web framework
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+
+# Data processing
+pandas>=1.5.0
+numpy>=1.22.0
+
+# Trading APIs and connections
+yfinance>=0.2.18
+
+# Cloud services
+google-cloud-storage>=2.10.0
+
+# HTTP client
+httpx>=0.24.0
+
+# Development
+python-dotenv>=1.0.0
